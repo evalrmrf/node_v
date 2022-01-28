@@ -1,10 +1,10 @@
 {
   "name": "nodev",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "The package allows you to check and control node and npm versions in your project",
-  "main": "index.js",
+  "main": "bin/nodev.js",
   "bin": {
-    "nodev": "node index.js"
+    "nodev": "bin/nodev.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
