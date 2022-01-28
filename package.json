@@ -1,0 +1,27 @@
+{
+  "name": "nodev",
+  "version": "1.0.0",
+  "description": "The package allows you to check and control node and npm versions in your project",
+  "main": "index.js",
+  "bin": {
+    "nodev": "node index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evalrmrf/nodev.git"
+  },
+  "keywords": [],
+  "author": "rerm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evalrmrf/nodev/issues"
+  },
+  "homepage": "https://github.com/evalrmrf/nodev#readme",
+  "engines": {
+    "node": ">=12.0.0 <13.0.0",
+    "npm": ">=6.0.0 <7.0.0"
+  }
+}
