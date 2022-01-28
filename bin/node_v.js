@@ -2,7 +2,7 @@
 
 const { exec } = require('child_process');
 
-exec('sh ./bin/cli.sh',
+exec('sh node_modules/@rerm/node_v/bin/cli.sh',
     (error, stdout, stderr) => {
         if (stderr){
             console.log(stderr)

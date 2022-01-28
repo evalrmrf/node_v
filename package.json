@@ -1,6 +1,6 @@
 {
   "name": "@rerm/node_v",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "The package allows you to check and control node and npm versions in your project",
   "main": "bin/nodev.js",
   "bin": {
