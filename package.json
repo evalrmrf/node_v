@@ -1,6 +1,6 @@
 {
   "name": "@rerm/node_v",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "The package allows you to check and control node and npm versions in your project",
   "main": "bin/nodev.js",
   "bin": {
@@ -19,9 +19,5 @@
   "bugs": {
     "url": "https://github.com/evalrmrf/nodev/issues"
   },
-  "homepage": "https://github.com/evalrmrf/nodev#readme",
-  "engines": {
-    "node": ">=12.0.0 <13.0.0",
-    "npm": ">=6.0.0 <7.0.0"
-  }
+  "homepage": "https://github.com/evalrmrf/nodev#readme"
 }
