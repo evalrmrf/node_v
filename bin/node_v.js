@@ -2,7 +2,7 @@
 
 const { exec } = require('child_process');
 
-exec('sh bin/cli.sh',
+exec('sh ./bin/cli.sh',
     (error, stdout, stderr) => {
         if (stderr){
             console.log(stderr)
