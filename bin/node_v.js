@@ -1,8 +1,23 @@
 #! /usr/bin/env node
 
-const { exec } = require('child_process');
+'use strict'
 
-exec('sh bin/cli.sh',
+const { exec } = require('child_process');
+const path = require('path');
+
+process.on('unhandledRejection', err => {
+    throw err;
+});
+
+const arg = process.argv.slice(2);
+
+if (arg[0] !== 'check') {
+    process.exit(1)
+}
+
+const run_command = path.resolve(__dirname, 'cli.sh')
+
+exec(`sh ${run_command}`,
     (error, stdout, stderr) => {
         if (stderr){
             console.log(stderr)

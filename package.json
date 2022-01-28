@@ -1,10 +1,10 @@
 {
   "name": "@evalrmrf/node_v",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CLI tool to check node and npm versions in your project",
   "main": "index.js",
   "bin": {
-    "check": "bin/node_v.js"
+    "node_v": "./bin/node_v.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
