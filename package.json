@@ -1,7 +1,7 @@
 {
   "name": "@evalrmrf/node_v",
-  "version": "0.2.1",
-  "description": "A CLI tool to check node and npm versions in your project",
+  "version": "0.2.2",
+  "description": "A CLI tool which helps to check node and npm versions in your project",
   "bin": {
     "node_v": "./bin/node_v.js"
   },
