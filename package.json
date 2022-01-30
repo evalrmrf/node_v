@@ -1,6 +1,6 @@
 {
   "name": "@evalrmrf/node_v",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "description": "A CLI tool to check node and npm versions in your project",
   "bin": {
     "node_v": "./bin/node_v.js"
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/evalrmrf/nodev/issues"
   },
-  "homepage": "https://github.com/evalrmrf/nodev#readme"
+  "homepage": "https://github.com/evalrmrf/nodev#readme",
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  }
 }

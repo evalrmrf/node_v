@@ -11,18 +11,36 @@ process.on('unhandledRejection', err => {
 
 const arg = process.argv.slice(2);
 
-if (arg[0] !== 'check') {
-    console.log(`Unknown command ${arg[0]}. Please try to use "check" command`)
-    process.exit(1)
-}
+const commands = ['check', 'node', 'npm', 'help', 'version', 'system'];
 
-const run_command = path.resolve(__dirname, 'cli.sh')
+const scriptIndex = arg.findIndex(
+    x => x === 'check' || x === 'node' || x === 'npm' || x === 'help' || x === 'version' || x === 'system'
+  );
+ 
+const script = scriptIndex === -1 ? arg[0] : arg[scriptIndex];
 
-exec(`sh ${run_command}`,
+if(commands.includes(script)) {
+    const run_command = path.resolve(__dirname, `${script}.sh`)
+    exec(`sh ${run_command}`,
     (error, stdout, stderr) => {
-        if (stderr || error){
-            console.log('Sorry, I am not able to check your NodeJS and NPM versions')
+        if (stderr){
+            console.log(stderr)
+            console.log('Sorry, I am not able to check your nodejs and npm versions')
             process.exit(1)
         }
         console.log(stdout);
-});
+    });
+} else if (typeof script === 'undefined') {
+    const run_command = path.resolve(__dirname, `help.sh`)
+    exec(`sh ${run_command}`,
+    (error, stdout, stderr) => {
+        if (stderr){
+            console.log(stderr)
+            console.log('Sorry, I am not able to check your nodejs and npm versions')
+            process.exit(1)
+        }
+        console.log(stdout);
+    });
+} else {
+    console.log(`Unknown command ${script}, try to run node_v help`)
+}
